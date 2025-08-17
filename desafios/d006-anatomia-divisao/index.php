@@ -8,10 +8,10 @@
 </head>
 <body>
     <?php 
-        $dividendo = $_GET['dividendo'] ?? 0;
-        $divisor = $_GET['divisor'] ?? 1;
-
+        $dividendo = is_numeric($_GET['dividendo'] ?? '') ? (int) $_GET['dividendo'] : 0;
+        $divisor = is_numeric($_GET['divisor'] ?? '') && (int)$_GET['divisor'] != 0 ? (int) $_GET['divisor'] : 1;
     ?>
+
     <main>
         <h1>Anatomia de uma Divisão</h1>
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="get">
