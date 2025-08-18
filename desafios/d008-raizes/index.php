@@ -25,10 +25,11 @@
                 $raiz_cubica = $numero ** (1/3);
                 echo "Analisando o <strong>número $numero</strong>, temos:";
             ?>
-            <ul>
-                <li>A raiz quadrada é <strong><?=$raiz_quadrada?></strong></li>
-                <li>A raiz cubica é <strong><?=$raiz_cubica?></strong></li>
+           <ul>
+                <li>A raiz quadrada é <strong><?= number_format($raiz_quadrada, 2, ',', '.') ?></strong></li>
+                <li>A raiz cúbica é <strong><?= number_format($raiz_cubica, 2, ',', '.') ?></strong></li>
             </ul>
+
         </section>
     </main>
 </body>
